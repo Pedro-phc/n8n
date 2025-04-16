@@ -1,14 +1,11 @@
-// server.mjs
-import { createServer } from 'node:http';
+# Descarregar e instalar a fnm:
+winget install Schniz.fnm
 
-const server = createServer((req, res) => {
-  res.writeHead(200, { 'Content-Type': 'text/plain' });
-  res.end('Hello World!\n');
-});
+# Descarregar e instalar a Node.js:
+fnm install 18
 
-// starts a simple http server locally on port 3000
-server.listen(3000, '127.0.0.1', () => {
-  console.log('Listening on 127.0.0.1:3000');
-});
+# Consultar a versão da Node.js:
+node -v # Deveria imprimir "v18.20.8".
 
-// run with `node server.mjs`
+# Consultar a versão da npm:
+npm -v # Deveria imprimir "10.8.2".
